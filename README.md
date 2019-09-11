@@ -16,3 +16,10 @@ This project attempts at using an LSTM to predict the salary using unstructured 
   
 # Open url 
   wget http://localhost:5000/salary/predict/<url>
+	
+# Wanna Retrain yourself ? Follow the instructions
+  python train_model/training.py
+
+# Copy your model at the base directory.
+
+# Enjoy !
