@@ -31,6 +31,7 @@ def load_vectors(fname):
     return data
 
 #Forms a word embedding dictionary for searching representations
+#These pretrained word embeddings are provided by fasttext. One can also use Glove Vectors or Word2Vec files
 wordvectors = load_vectors("fasttext/wiki-news-300d-1M.vec")
 
 
@@ -86,7 +87,7 @@ p = parser()
 def find_expected_salary(uniqueid):
     print("Predicting....")
     try :
-        sal = str(round(m.modelinfer(data[1])[0][0],2)*80)
+        sal = str(round(m.modelinfer(data[1])[0][0],2))
         return "{"+"'Title:'"+data[0]+","+"'Predicted':"+sal+"}"
     except Error as error :
         print(error)
